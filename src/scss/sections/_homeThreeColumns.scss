@@ -1,0 +1,33 @@
+.threeColumns {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+  align-items: center;
+  background-image: url("../../assets/3-Columns-Background.png");
+  padding: 46px 163px 86px 163px;
+
+  &__box {
+    text-align: center;
+    color: $colorThreeColumns;
+  }
+
+  &__number {
+    font-weight: 300;
+    font-size: 9rem;
+    line-height: 12.2rem;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem;
+    margin-bottom: 28px;
+  }
+
+  &__description {
+    font-family: $font-alt;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
