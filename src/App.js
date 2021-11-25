@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./components/Home";
 import {
-    HashRouter,
+    BrowserRouter,
     Route,
     Routes,
     Link,
@@ -13,14 +13,14 @@ import HomeHeader from "./components/HomeHeader";
 function App() {
   return (
       <>
-          <Home/>
-          <HashRouter>
-            <Routes>
-                <Route exact path='/' element={Home}/>
-                <Route path='/logowanie' element={HomeHeader}/>
-                <Route path='/rejestracja' element={HomeHeader}/>
-            </Routes>
-          </HashRouter>
+          {/*<BrowserRouter>*/}
+              <Home/>
+          {/*  <Switch>*/}
+          {/*      <Route exact path='/' element={Home}/>*/}
+          {/*      <Route path='/logowanie' element={HomeHeader}/>*/}
+          {/*      <Route path='/rejestracja' element={HomeHeader}/>*/}
+          {/*  </Switch>*/}
+          {/*</BrowserRouter>*/}
       </>
   );
 }

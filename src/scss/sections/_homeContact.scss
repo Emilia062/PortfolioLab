@@ -1,0 +1,115 @@
+#homeContact {
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__text {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    margin-right: 14rem;
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7.7rem;
+    margin-bottom: 4rem;
+  }
+
+  &__area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid #707070;
+    color: #3C3C3C26;
+    width: 25.6rem;
+  }
+
+  &__textarea {
+    border: none;
+    border-bottom: 1px solid #707070;
+    color:#3C3C3C26;
+    width: 52.8rem;
+    height: 9.7rem;
+  }
+
+  &__btn {
+    padding: 13px 52px;
+    border: 0.75px solid $colorFont;
+    margin-top: 5rem;
+    align-self: flex-end;
+    background-color: white;
+    color: #000000;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+
+  &__footer {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27.3rem;
+    margin-bottom: 2.4rem;
+
+    &--copyright {
+      margin-left: 50rem;
+      z-index: 2;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      margin-right: 58.7rem;
+    }
+
+    &--facebook {
+      margin-right: 2rem;
+    }
+
+    &--icons {
+      z-index: 2;
+      margin-right: 14.2rem;
+    }
+  }
+
+}

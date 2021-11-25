@@ -1,0 +1,40 @@
+.aboutUs {
+  display: flex;
+
+  &__box {
+    width: 50vw;
+    height: 93.5rem;
+    background-color: $colorBackground;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    margin-top: 18.6rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &__description {
+    font-size: 3rem;
+    line-height: 5.4rem;
+    margin: 0 15rem;
+  }
+
+  &__signature {
+    margin-top: 4rem;
+    margin-right: 15rem;
+    align-self: flex-end;
+  }
+
+  &__people {
+    background-image: url("../../assets/People.jpg");
+    background-size: 140% 100%;
+    background-position: left;
+    overflow: hidden;
+    width: 50vw;
+    height: 93.5rem;
+  }
+}

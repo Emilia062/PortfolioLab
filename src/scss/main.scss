@@ -1,4 +1,5 @@
 @import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Open+Sans:wght@300;400;600&display=swap');
 
 @import "settings/fonts";
 @import "settings/colors";
@@ -7,3 +8,5 @@
 @import "sections/homeThreeColumns";
 @import "sections/homeFourSteps";
 @import "sections/homeHeader";
+@import "sections/homeAboutUs";
+@import "sections/homeContact";

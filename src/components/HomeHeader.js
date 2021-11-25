@@ -12,20 +12,22 @@ import HomeContact from "./HomeContact";
 function HomeHeader() {
     return (
         <div className={"header"}>
-            <img src={img} alt={"staff"} className={"header__img"}/>
+            <div className={"header__img"}/>
             <div className={"header__text"}>
             <BrowserRouter>
                 <div className={"header__links"}>
-                    <Link to="/logowanie" className={"header__links--login"}>Zaloguj się</Link>
-                    <Link to="/rejestracja" className={"header__links--register"}>Zarejestruj się</Link>
+                    <Link to="/logowanie" element={HomeHeader} className={"header__links--login"}>Zaloguj się</Link>
+                    <Link to="/rejestracja" element={HomeHeader} className={"header__links--register"}>Zarejestruj się</Link>
                 </div>
             </BrowserRouter>
                 <div className={"header__nav"}>
-                    <LinkS to="home" spy={true} smooth={true} className={"header__nav--link"}>Start</LinkS>
+                    <BrowserRouter>
+                        <Link to="/" element={Home} className={"header__nav--link"}>Start</Link>
+                    </BrowserRouter>
                     <LinkS to={"homeFourSteps"} spy={true} smooth={true} className={"header__nav--link"}>O co chodzi?</LinkS>
-                    <LinkS to="homeAboutUs" spy={true} smooth={true} className={"header__nav--link"}>O nas</LinkS>
-                    <LinkS to="homeWhoWeHelp" spy={true} smooth={true} className={"header__nav--link"}>Fundacja i Organizacje</LinkS>
-                    <LinkS to="homeContact" spy={true} smooth={true} className={"header__nav--link"}>Kontakt</LinkS>
+                    <LinkS to={"homeAboutUs"} spy={true} smooth={true} className={"header__nav--link"}>O nas</LinkS>
+                    <LinkS to={"homeWhoWeHelp"} spy={true} smooth={true} className={"header__nav--link"}>Fundacja i Organizacje</LinkS>
+                    <LinkS to={"homeContact"} spy={true} smooth={true} className={"header__nav--link"}>Kontakt</LinkS>
                 </div>
                 <div className={"header__titles"}>
                     <h1 className={"header__title"}>Zacznij pomagać!</h1>
