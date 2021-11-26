@@ -1,0 +1,83 @@
+.help {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 19.3rem;
+
+  &__title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__organizations {
+    margin-top: 7.3rem;
+    display: flex;
+    gap: 15rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 8rem;
+  }
+
+  &__link {
+    &:active {
+      padding: 1.1rem 5rem;
+      border: 0.75px solid $colorFont;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0 45rem 6.6rem;
+  }
+
+  &__list {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:nth-child(2n) {
+      border-top: 0.75px solid $colorFont;
+      border-bottom: 0.75px solid $colorFont;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--titles {
+      margin-top: 3.4rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 80rem;
+    }
+
+    &--title {
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+    }
+
+    &--text1 {
+      font-family: $font-alt;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 2.2rem;
+    }
+
+    &--text2 {
+      margin-top: 0.6rem;
+      font-family: $font-alt;
+      font-weight: 300;
+      font-size: 1.8rem;
+      font-style: italic;
+      line-height: 2.2rem;
+      margin-bottom: 3.1rem;
+    }
+  }
+}
