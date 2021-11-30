@@ -1,0 +1,57 @@
+.login {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__inputs {
+    margin: 6rem;
+    padding: 4rem 6.2rem;
+    background-color: $colorBackground;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-top: 3.1rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+  }
+
+  &__input {
+    border:none;
+    background-color: $colorBackground;
+    border-bottom: 0.75px solid $colorFont ;
+  }
+
+  &__buttons {
+    margin-top: 5.3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 30rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    font-weight: 300;
+  }
+
+  &__account {
+    text-decoration: none;
+  }
+
+  &__btn {
+    padding: 1.3rem 1.5rem;
+    text-decoration: none;
+    background-color: white;
+    border: 0.75px solid $colorFont;
+    color: $colorFont;
+    font-weight: 300;
+  }
+}

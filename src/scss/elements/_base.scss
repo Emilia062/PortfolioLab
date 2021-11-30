@@ -10,3 +10,7 @@ body {
   font-family: $font-base;
   color: $colorFont;
 }
+
+.active {
+  border: 0.75px solid $colorFont;
+}

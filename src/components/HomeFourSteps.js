@@ -4,7 +4,7 @@ import icon1 from "../assets/Icon-1.svg";
 import icon2 from "../assets/Icon-2.svg";
 import icon3 from "../assets/Icon-3.svg";
 import icon4 from "../assets/Icon-4.svg";
-import {BrowserRouter, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const HomeFourSteps = () => {
     return (
@@ -39,13 +39,11 @@ const HomeFourSteps = () => {
                     <p className={"box__description"}>kurier przyjedzie w dogodnym terminie</p>
                 </div>
             </div>
-            <BrowserRouter>
                 <div className={"fourSteps__button"}>
                     <button className={"fourSteps__btn btn"}>
                         <Link to="/logowanie" className={"fourSteps__link"}><div>ODDAJ</div><div>RZECZY</div></Link>
                     </button>
                 </div>
-            </BrowserRouter>
         </div>
     );
 };

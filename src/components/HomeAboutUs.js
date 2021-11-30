@@ -1,6 +1,5 @@
 import React from 'react';
 import decoration from "../assets/Decoration.svg";
-import img from "../assets/Home-Hero-Image.jpg";
 import signature from "../assets/Signature.svg";
 
 const HomeAboutUs = () => {

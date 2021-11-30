@@ -9,18 +9,19 @@ import {
     NavLink,
 } from 'react-router-dom';
 import HomeHeader from "./components/HomeHeader";
+import Login from "./components/Login";
 
 function App() {
   return (
       <>
-          {/*<BrowserRouter>*/}
+          <BrowserRouter>
               <Home/>
-          {/*  <Switch>*/}
-          {/*      <Route exact path='/' element={Home}/>*/}
-          {/*      <Route path='/logowanie' element={HomeHeader}/>*/}
-          {/*      <Route path='/rejestracja' element={HomeHeader}/>*/}
-          {/*  </Switch>*/}
-          {/*</BrowserRouter>*/}
+            {/*<Routes>*/}
+            {/*    <Route exact path='/' element={Home}/>*/}
+            {/*    <Route path='/logowanie' element={Login}/>*/}
+            {/*    <Route path='/rejestracja' element={HomeHeader}/>*/}
+            {/*</Routes>*/}
+          </BrowserRouter>
       </>
   );
 }

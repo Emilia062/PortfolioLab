@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 19.3rem;
+  margin-bottom: 15rem;
 
   &__title {
     font-size: 3.8rem;
@@ -22,10 +22,12 @@
   }
 
   &__link {
-    &:active {
-      padding: 1.1rem 5rem;
-      border: 0.75px solid $colorFont;
-      cursor: pointer;
+    text-decoration: none;
+    color: $colorFont;
+    padding: 1.1rem 5rem;
+
+    &:first-child {
+      padding: 2.2rem 4.2rem;
     }
   }
 
@@ -80,4 +82,19 @@
       margin-bottom: 3.1rem;
     }
   }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.2rem;
+
+    &--number {
+      text-decoration: none;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: $colorFont;
+      cursor: pointer;
+    }
+  }
 }
+

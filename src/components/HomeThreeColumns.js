@@ -21,7 +21,6 @@ const HomeThreeColumns = () => {
                 <div className={"threeColumns__description"}>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra
                     elementuma. Aliquam erat volutpat.</div>
             </div>
-            
         </div>
     );
 };

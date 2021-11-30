@@ -1,6 +1,8 @@
 #homeContact {
   background-image: url("../../assets/Background-Contact-Form.jpg");
-  background-size: 100%;
+  background-position: left;
+  overflow: hidden;
+  background-size: 92% 105%;
   background-repeat: no-repeat;
   position: relative;
 
@@ -8,7 +10,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     position: absolute;
     top: 0;
     left: 0;
@@ -65,6 +67,7 @@
     border-bottom: 1px solid #707070;
     color: #3C3C3C26;
     width: 25.6rem;
+    font-size: 1.8rem;
   }
 
   &__textarea {
@@ -72,7 +75,9 @@
     border-bottom: 1px solid #707070;
     color:#3C3C3C26;
     width: 52.8rem;
-    height: 9.7rem;
+    height: 14rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 
   &__btn {
