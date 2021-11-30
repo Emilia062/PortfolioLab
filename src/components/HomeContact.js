@@ -29,7 +29,7 @@ const HomeContact = () => {
             setEmail("")
         }
         if(msg.length < 120){
-            setErrorsMsg("Widomość musi mieć przynajmniej 120 znaków!")
+            setErrorsMsg("Wiadomość musi mieć przynajmniej 120 znaków!")
             setMsg(" ")
         }
 
@@ -41,10 +41,10 @@ const HomeContact = () => {
             }
             fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
                 method: "POST",
-                body: JSON.stringify(data),
                 headers: {
                     "Content-Type": "application/json"
-                }
+                },
+                body: JSON.stringify(data)
             })
                 .then(response => response.json())
                 .then(data => {
@@ -56,8 +56,6 @@ const HomeContact = () => {
         }
 
     }
-
-
 
     return (
         <div id={"homeContact"}>

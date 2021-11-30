@@ -17,7 +17,7 @@ function App() {
           <BrowserRouter>
               <Home/>
             {/*<Routes>*/}
-            {/*    <Route exact path='/' element={Home}/>*/}
+            {/*    <Route exact path='/' element={HomeHeader}/>*/}
             {/*    <Route path='/logowanie' element={Login}/>*/}
             {/*    <Route path='/rejestracja' element={HomeHeader}/>*/}
             {/*</Routes>*/}

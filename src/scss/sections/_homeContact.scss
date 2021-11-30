@@ -92,6 +92,13 @@
     line-height: 3.2rem;
   }
 
+  &__errors {
+    padding-top: 1.5rem;
+    color: red;
+    font-weight: 600;
+    border-top: 2px solid red;
+  }
+
   &__footer {
     z-index: 2;
     display: flex;

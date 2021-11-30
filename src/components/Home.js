@@ -12,7 +12,6 @@ const Home = () => {
     return (
       <>
           <HomeHeader/>
-          <HomeMain/>
           <HomeThreeColumns/>
           <HomeFourSteps/>
           <HomeAboutUs/>

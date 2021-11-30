@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Collections = ({collections}) => {
+const Collections = () => {
+    const collectionsArray = [
+        {title:"Lorem Ipsum 1", text1: "Egestas, sed, tempus", text2:"Quis varius quam quisque id diam vel quam elementum pulvinar."},
+        {title:"Lorem Ipsum 2", text1: "Ut, aliquam, purus, sit, amet", text2: "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue."},
+        {title: "Lorem Ipsum 3", text1: "Mi, quis, hendrerit, dolor", text2: "Scelerisque in dictum non consectetur a erat nam."},
+    ]
+
+    const [collections] = useState(collectionsArray);
 
     return (
         <>
