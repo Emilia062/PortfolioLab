@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import HomeHeader from "./components/HomeHeader";
 import Login from "./components/Login";
+import Registration from "./components/Registration";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
               <Home/>
             {/*<Routes>*/}
             {/*    <Route exact path='/' element={HomeHeader}/>*/}
-            {/*    <Route path='/logowanie' element={Login}/>*/}
-            {/*    <Route path='/rejestracja' element={HomeHeader}/>*/}
+            {/*    <Route exact path='/logowanie' element={Login}/>*/}
+            {/*    <Route exact path='/rejestracja' element={Registration}/>*/}
             {/*</Routes>*/}
           </BrowserRouter>
       </>

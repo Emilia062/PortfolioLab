@@ -29,12 +29,12 @@ const Foundations = () => {
         <>
             {currentPosts.map((item, index) => {
                 return(
-                    <div key={index} className={"help__list"}>
-                        <div className={"help__list--titles"}>
-                            <p className={"help__list--title"}>Fundacja "{item.title}"</p>
-                            <p className={"help__list--text1"}>{item.text1}</p>
+                    <div key={index} className="help__list">
+                        <div className="help__list--titles">
+                            <p className="help__list--title">Fundacja "{item.title}"</p>
+                            <p className="help__list--text1">{item.text1}</p>
                         </div>
-                        <p className={"help__list--text2"}>{item.text2}</p>
+                        <p className="help__list--text2">{item.text2}</p>
                     </div>
                 )
             })}

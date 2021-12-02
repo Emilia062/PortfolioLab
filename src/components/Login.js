@@ -1,35 +1,50 @@
 import React, {useState} from 'react';
 import decoration from "../assets/Decoration.svg";
-import {Link, NavLink} from "react-router-dom";
-import Home from "./Home";
-import {Link as LinkS} from "react-scroll";
-import HomeHeader from "./HomeHeader";
+import {Link} from "react-router-dom";
+import Registration from "./Registration";
 
-const Login = () => {
-    const [name, setName] = useState();
-    const [password, setPassword] = useState();
+const Login = ({handleActiveRegistration}) => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorsPassword, setErrorsPassword] = useState([]);
+    const [errorsEmail, setErrorsEmail] = useState([]);
+
+    // const validateEmail = (email) => {
+    //     return email.match(
+    //         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    //     );
+    // };
+    //
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //
+    //     if(password.length < 6){
+    //         setErrorsPassword("Podane hasło jest za krótkie!")
+    //     }
+    // }
+    //     if(!validateEmail(email)){
+    //         setErrorsEmail("Podany email jest nieprawidłowy!")
+    //     }
+
+    // element={Registration}
+
     return (
         <>
-            <div className={"header__nav"}>
-                <NavLink activeclassname={"active"} to="/" element={Home} className={"header__nav--link"}>Start</NavLink>
-                <LinkS to={"homeFourSteps"} spy={true} smooth={true} className={"header__nav--link"}>O co chodzi?</LinkS>
-                <LinkS to={"homeAboutUs"} spy={true} smooth={true} className={"header__nav--link"}>O nas</LinkS>
-                <LinkS to={"homeWhoWeHelp"} spy={true} smooth={true} className={"header__nav--link"}>Fundacja i Organizacje</LinkS>
-                <LinkS to={"homeContact"} spy={true} smooth={true} className={"header__nav--link"}>Kontakt</LinkS>
-            </div>
-            <div className={"login"}>
-                <h2 className={"login__title"}>Zaloguj się</h2>
-                <img src={decoration} alt={decoration} className={"login__decoration"}/>
-                <form className={"login__form"}>
-                    <div className={"login__inputs"}>
-                        <label htmlFor={"name"} className={"login__label"}>Email</label>
-                        <input type="name" id="name" className={"login__input"} value={name} onChange={e => setName(e.target.value)}/>
-                        <label htmlFor={"password"} className={"login__label"}>Hasło</label>
-                        <input type="password" id="password" className={"login__input"} value={password} onChange={e => setPassword(e.target.value)}/>
+            <div className="panel">
+                <h2 className="panel__title">Zaloguj się</h2>
+                <img src={decoration} alt={decoration} className="panel__decoration"/>
+                <form className="panel__form">
+                    <div className="panel__inputs">
+                        <label htmlFor="email" className="panel__label">Email</label>
+                        <input type="email" id="email" className="panel__input" value={email} onChange={e => setEmail(e.target.value)}/>
+                        <div className="contact__errors">{errorsEmail}</div>
+                        <label htmlFor="password" className="panel__label">Hasło</label>
+                        <input type="password" id="password" className="panel__input" value={password} onChange={e => setPassword(e.target.value)}/>
+                        <div className="contact__errors">{errorsPassword}</div>
                     </div>
-                    <div className={"login__buttons"}>
-                        <Link to="/rejestracja" component={HomeHeader} className={"login__account"}>Załóż konto</Link>
-                        <button className={"login__btn"}>Zaloguj się</button>
+                    <div className="panel__buttons">
+                        <Link to="/rejestracja" className="panel__account" onClick={handleActiveRegistration}>Załóż konto</Link>
+                        <button className="panel__btn" >Zaloguj się</button>
                     </div>
                 </form>
             </div>

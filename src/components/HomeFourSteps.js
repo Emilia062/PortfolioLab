@@ -6,7 +6,7 @@ import icon3 from "../assets/Icon-3.svg";
 import icon4 from "../assets/Icon-4.svg";
 import {Link} from "react-router-dom";
 
-const HomeFourSteps = () => {
+const HomeFourSteps = ({handleActiveLogin}) => {
     return (
         <div id={"homeFourSteps"} className={"fourSteps"}>
             <div className={"fourSteps__entrance"}>
@@ -41,7 +41,7 @@ const HomeFourSteps = () => {
             </div>
                 <div className={"fourSteps__button"}>
                     <button className={"fourSteps__btn btn"}>
-                        <Link to="/logowanie" className={"fourSteps__link"}><div>ODDAJ</div><div>RZECZY</div></Link>
+                        <Link to="/logowanie" className={"fourSteps__link"} onClick={handleActiveLogin}><div>ODDAJ</div><div>RZECZY</div></Link>
                     </button>
                 </div>
         </div>
