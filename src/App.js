@@ -11,18 +11,13 @@ import {
 import HomeHeader from "./components/HomeHeader";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
+import React from "react";
+import Form from "./components/Form";
 
 function App() {
   return (
       <>
-          <BrowserRouter>
-              <Home/>
-            {/*<Routes>*/}
-            {/*    <Route exact path='/' element={HomeHeader}/>*/}
-            {/*    <Route exact path='/logowanie' element={Login}/>*/}
-            {/*    <Route exact path='/rejestracja' element={Registration}/>*/}
-            {/*</Routes>*/}
-          </BrowserRouter>
+          <Home/>
       </>
   );
 }

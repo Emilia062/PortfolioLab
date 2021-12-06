@@ -1,0 +1,162 @@
+.form {
+
+  &__container {
+    display: flex;
+  }
+
+  &__img {
+    background-image: url("../../assets/Form-Hero-Image.jpg");
+    background-position: right;
+    overflow: hidden;
+    background-size: 150% 100%;
+    width: 47vw;
+    height: 85.3rem;
+    z-index: -2;
+  }
+
+  &__content {
+    margin-right: 15rem;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-top: 13rem;
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+
+  &__steps {
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 5.5rem;
+    margin-bottom: 4.4rem;
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1.9rem 5.3rem 6rem;
+  }
+
+  &__border {
+    width: 19rem;
+    height: 19rem;
+    border: 0.75px solid $colorFont;
+    transform: rotate(45deg);
+    position: absolute;
+  }
+
+  &__number {
+    margin-top: 1.9rem;
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  &__info {
+    background-color: $colorNotification;
+    padding: 50px 140px;
+  }
+
+  &__important {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  &__background {
+    background-image: url("../../assets/Background-Form.jpg");
+    background-position: right;
+    overflow: hidden;
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  &__form {
+    margin-left: 14rem;
+  }
+
+  &__step {
+    padding-top: 3.6rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 7rem;
+  }
+
+  &__subtitle {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 4.4rem;
+  }
+
+  &__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 4.2rem;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+  }
+
+  &__radio {
+    &--label {
+      margin-left: 3rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    &--input {
+      -webkit-appearance: none;
+      -moz-appearance:    none;
+      appearance:         none;
+      width: 4rem;
+      height: 4rem;
+      border: 0.75px solid $colorFont;
+
+      &:checked {
+        background-color: $colorNotification;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 15.8rem;
+    border: 0.75px solid $colorFont;
+    background: none;
+    padding: 23px 63px;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 5rem;
+  }
+}
+
+//Step1
+.step1 {
+  &__important {
+    font-size: 2.2rem;
+  }
+}

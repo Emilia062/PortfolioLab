@@ -9,7 +9,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     }
 
     return (
-        <ul className={"help__pagination"}>
+        <ul className="help__pagination">
             {pageNumbers.map(number => {
                 return (
                     <li key={number}>

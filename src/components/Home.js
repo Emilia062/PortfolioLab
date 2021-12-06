@@ -5,37 +5,25 @@ import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
 import HomeContact from "./HomeContact";
-import HomeFooter from "./HomeFooter";
+import HomeMain from "./HomeMain";
+import Login from "./Login";
+import Registration from "./Registration";
+import Form from "./Form";
 
 const Home = () => {
-    const [isActiveLogin, setIsActiveLogin] = useState(false);
-    const [isActiveRegistration, setIsActiveRegistration] = useState(false);
 
-    const handleActiveLogin = () => {
-        setIsActiveLogin(true);
-        setIsActiveRegistration(false);
-    }
-
-    const handleActiveRegistration = () => {
-        setIsActiveRegistration(true);
-        setIsActiveLogin(false);
-    }
-
-    const handleHome = () => {
-        setIsActiveRegistration(false);
-        setIsActiveLogin(false);
-    }
     return (
       <>
-          <HomeHeader isActiveLogin={isActiveLogin} isActiveRegistration={isActiveRegistration}
-           handleHome={handleHome} handleActiveLogin={handleActiveLogin}
-                      handleActiveRegistration={handleActiveRegistration}/>
+          <HomeHeader />
+          <HomeMain/>
           <HomeThreeColumns/>
-          <HomeFourSteps handleActiveLogin={handleActiveLogin}/>
+          <HomeFourSteps />
           <HomeAboutUs/>
           <HomeWhoWeHelp/>
           <HomeContact/>
-          <HomeFooter/>
+          {/*<Login/>*/}
+          {/*<Registration/>*/}
+          {/*<Form/>*/}
       </>
     );
 };

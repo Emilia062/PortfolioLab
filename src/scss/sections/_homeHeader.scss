@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  margin-right: 20rem;
 
   &__img {
     background-image: url("../../assets/Home-Hero-Image.jpg");
@@ -9,12 +10,13 @@
     background-size: 150% 100%;
     width: 47vw;
     height: 96.3rem;
+    z-index: 2;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    margin-right: 20rem;
+    //margin-right: 20rem;
     padding-left: 6.6rem;
   }
 
@@ -49,8 +51,14 @@
       font-size: 1.8rem;
       line-height: 2.4rem;
       cursor: pointer;
-      padding: 0.9rem 1rem;
+      padding: 1rem 1rem;
     }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20rem;
   }
 
 

@@ -6,7 +6,7 @@ import facebook from "../assets/Facebook.svg";
 const HomeContact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [msg, setMsg] = useState("");
+    const [message, setMessage] = useState("");
     const [errorsName, setErrorsName] = useState([]);
     const [errorsEmail, setErrorsEmail] = useState([]);
     const [errorsMsg, setErrorsMsg] = useState([]);
@@ -26,15 +26,15 @@ const HomeContact = () => {
         if(!validateEmail(email)){
             setErrorsEmail("Podany email jest nieprawidłowy!")
         }
-        if(msg.length < 120){
+        if(message.length < 120){
             setErrorsMsg("Wiadomość musi mieć przynajmniej 120 znaków!")
         }
 
-        if(msg.length >= 120 && validateEmail(email) && name.includes(" ") === false) {
+        if(message.length >= 120 && validateEmail(email) && name.includes(" ") === false) {
             const data = {
                 name,
                 email,
-                msg
+                message
             }
             fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
                 method: "POST",
@@ -56,7 +56,7 @@ const HomeContact = () => {
         }
         setName("");
         setEmail("");
-        setMsg("");
+        setMessage("");
     }
 
     return (
@@ -82,7 +82,7 @@ const HomeContact = () => {
                     </div>
                     <div className="contact__area">
                         <label htmlFor="textarea" className="contact__label">Wpisz swoją wiadomość</label>
-                        <textarea id="textarea" className="contact__textarea" value={msg} onChange={e => setMsg(e.target.value)}
+                        <textarea id="textarea" className="contact__textarea" value={message} onChange={e => setMessage(e.target.value)}
                                   style={errorsMsg.length === 0 ? {borderBottom:"1px solid #707070"} : {borderBottom:"1px solid red"} }/>
                         <div className="contact__errors">{errorsMsg}</div>
                     </div>
