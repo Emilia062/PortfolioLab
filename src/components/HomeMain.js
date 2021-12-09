@@ -14,10 +14,10 @@ function HomeMain() {
                 </div>
                 <div className="header__btns">
                     <button className="header__btn">
-                        <Link to="/logowanie" className="header__btn--link"><div>ODDAJ</div><div>RZECZY</div></Link>
+                        <Link to="/logowanie" className="header__btn--link">ODDAJ<br/>RZECZY</Link>
                     </button>
                     <button className="header__btn">
-                        <Link to="/logowanie" className="header__btn--link"><div>ZORGANIZUJ</div><div>ZBIÓRKĘ</div></Link>
+                        <Link to="/logowanie" className="header__btn--link">ZORGANIZUJ<br/>ZBIÓRKĘ</Link>
                     </button>
                 </div>
             </div>

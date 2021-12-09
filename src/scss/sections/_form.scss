@@ -83,6 +83,9 @@
     font-weight: 600;
     color: #000000;
   }
+  &__description {
+    font-size: 2.2rem;
+  }
 
   &__background {
     background-image: url("../../assets/Background-Form.jpg");
@@ -108,12 +111,23 @@
     font-weight: 600;
     color: #000000;
     margin-bottom: 4.4rem;
+
+    &--step2 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 4.4rem;
+    }
   }
 
   &__holder {
     display: flex;
     flex-direction: column;
     gap: 4.2rem;
+
+    &--step3 {
+      gap: 0;
+    }
   }
 
   &__option {
@@ -135,8 +149,15 @@
       width: 4rem;
       height: 4rem;
       border: 0.75px solid $colorFont;
+      background: none;
 
-      &:checked {
+      &--checked {
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+        width: 4rem;
+        height: 4rem;
+        border: 0.75px solid $colorFont;
         background-color: $colorNotification;
       }
     }
@@ -151,12 +172,159 @@
     font-weight: 300;
     color: #000000;
     margin-bottom: 5rem;
+    margin-right: 5rem;
   }
 }
 
-//Step1
-.step1 {
-  &__important {
-    font-size: 2.2rem;
+//Step2
+.step2 {
+  &__select {
+    width: 30rem;
+    height: 2.6rem;
+  }
+
+  &__holder {
+    display: flex;
+    gap: 2.6rem;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+}
+//Step3
+.step3 {
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2rem;
+  }
+
+  &__textarea {
+    width: 57rem;
+    height: 4rem;
+    border: 0.75px solid $colorFont;
+    background: none;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+li{
+  list-style-type: none;
+  list-style-position: outside;
+  float: left;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 1.1rem 2.2rem;
+  cursor: pointer;
+  border: 0.75px solid $colorFont;
+  color: #000000;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 2.4rem;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: $colorNotification;
+}
+
+//Step4
+.form {
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #000000;
+    }
+  }
+}
+
+.step4 {
+
+  &__holder {
+    display: flex;
+    gap: 10rem;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #000000;
+  }
+
+  &__textarea {
+    width: 25.6rem;
+    height: 4rem;
+    background: none;
+    border: 0.75px solid $colorFont;
+
+    &--notes {
+      width: 25.6rem;
+      height: 12rem;
+      background: none;
+      border: 0.75px solid $colorFont;
+    }
+  }
+}
+
+//Summary
+.summary {
+
+  &__subtitles {
+    margin-top: 7rem;
+  }
+
+  &__holder {
+    margin-top: 5rem;
+    display: flex;
+    gap: 15rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__box {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    display: flex;
+    gap: 1rem;
+    font-size: 2.4rem;
+    line-height: 4.5rem;
+    color: black;
   }
 }

@@ -8,16 +8,24 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import HomeHeader from "./components/HomeHeader";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
 import React from "react";
 import Form from "./components/Form";
+import LoggingOut from "./components/LoggingOut";
 
 function App() {
   return (
       <>
-          <Home/>
+          <BrowserRouter>
+              <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route exact path='/logowanie' component={Login} />
+                  <Route path='/rejestracja' component={Registration} />
+                  <Route path='/wylogowano' component={LoggingOut} />
+                  <Route path='/oddaj-rzeczy' component={Form}/>
+              </Switch>
+          </BrowserRouter>
       </>
   );
 }

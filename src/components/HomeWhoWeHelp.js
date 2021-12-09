@@ -16,10 +16,10 @@ const HomeWhoWeHelp = () => {
                    onClick= {() => setItemsToShow("foundations")} >Fundacjom</a>
                 <a className={itemsToShow === "organizations" ? "help__link active" : "help__link"}
                    onClick={() => setItemsToShow("organizations")}>
-                <div >Organizacjom</div> <div>pozarządowym</div>
+                <div >Organizacjom<br/>pozarządowym</div>
                 </a>
                 <a className={itemsToShow === "collections" ? "help__link active" : "help__link"} onClick={() => setItemsToShow("collections")}>
-                <div>Lokalnym</div> <div>zbiórkom</div>
+                <div>Lokalnym<br/>zbiórkom</div>
                 </a>
             </div>
             <p className="help__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

@@ -41,7 +41,7 @@ const HomeFourSteps = () => {
             </div>
                 <div className="fourSteps__button">
                     <button className="fourSteps__btn btn">
-                        <Link to="/logowanie" className="fourSteps__link"><div>ODDAJ</div><div>RZECZY</div></Link>
+                        <Link to="/logowanie" className="fourSteps__link">ODDAJ<br/>RZECZY</Link>
                     </button>
                 </div>
         </div>

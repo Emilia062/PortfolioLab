@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {Link as LinkS} from "react-scroll";
 import Login from "./Login";
 import Home from "./HomeMain";
 import Registration from "./Registration";
-import LoggingOut from "./LoggingOut";
 
 function HomeHeader() {
 

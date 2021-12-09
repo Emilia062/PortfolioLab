@@ -13,15 +13,7 @@ import Form from "./components/Form";
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
           <App/>
-          <Routes>
-              <Route exact path='/' component={App} />
-              <Route exact path='/logowanie' component={Login} />
-              <Route path='/rejestracja' component={Registration} />
-              <Route path='/oddaj-rzeczy' component={Form}/>
-          </Routes>
-      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

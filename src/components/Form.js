@@ -3,35 +3,35 @@ import HomeHeader from "./HomeHeader";
 import decoration from "../assets/Decoration.svg";
 import FormStep1 from "./FormStep1";
 import FormStep2 from "./FormStep2";
+import FormStep3 from "./FormStep3";
+import FormStep4 from "./FormStep4";
+import FormSummary from "./FormSummary";
+import HomeContact from "./HomeContact";
 
 const Form = () => {
     const [activeStep1, setActiveStep1] = useState(true);
     const [activeStep2, setActiveStep2] = useState(false);
     const [activeStep3, setActiveStep3] = useState(false);
     const [activeStep4, setActiveStep4] = useState(false);
+    const [activeSummary, setActiveSummary] = useState(false);
 
-    const handleStep1 = () => {
-        setActiveStep1(true);
-        setActiveStep2(false);
-    }
-
-    const handleStep2 = () => {
-        setActiveStep3(false);
-        setActiveStep2(true);
-        setActiveStep1(false);
-    }
-
-    const handleStep3 = () => {
-        setActiveStep4(false);
-        setActiveStep3(true);
-        setActiveStep2(false);
-    }
-
-    const  handleStep4 = () => {
-        setActiveStep4(true);
-        setActiveStep3(false);
-    }
-
+//Information from form
+    //Step1
+    const [things, setThings] = useState("")
+    //Step2
+    const [amountOfBags, setAmountOfBags] = useState();
+    //Step 3
+    const [location, setLocation] = useState("");
+    const [whoHelps, setWhoHelps] = useState([]);
+    const [organization, setOrganization] = useState("")
+    //Step 4
+    const [street, setStreet] = useState("");
+    const [city, setCity] = useState("");
+    const [postCode, setPostCode] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("");
+    const [notes, setNotes] = useState("");
 
     return (
         <>
@@ -68,8 +68,20 @@ const Form = () => {
                     </div>
                 </div>
             </div>
-            {activeStep1 === true && <FormStep1 handleStep2={handleStep2}/>}
-            {activeStep2 === true && <FormStep2 handleStep3={handleStep3}/>}
+            {activeStep1 === true && <FormStep1 setActiveStep1={setActiveStep1} setActiveStep2={setActiveStep2} setThings={setThings}/>}
+            {activeStep2 === true && <FormStep2 setActiveStep2={setActiveStep2} setActiveStep3={setActiveStep3}
+                                                setActiveStep1={setActiveStep1} amountOfBags={amountOfBags} setAmountOfBags={setAmountOfBags}/>}
+            {activeStep3 === true && <FormStep3 setActiveStep2={setActiveStep2} setActiveStep3={setActiveStep3}
+                                               setActiveStep4={setActiveStep4} location={location} setLocation={setLocation}
+            organization={organization} setWhoHelps={setWhoHelps} setOrganization={setOrganization}/>}
+            {activeStep4 === true && <FormStep4 setActiveStep4={setActiveStep4} setActiveStep3={setActiveStep3} setSummary={setActiveSummary}
+            street={street} setStreet={setStreet} city={city} setCity={setCity} postCode={postCode} setPostCode={setPostCode}
+            phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} date={date} setDate={setDate} time={time} setTime={setTime}
+            notes={notes} setNotes={setNotes}/>}
+            {activeSummary === true && <FormSummary things={things} amountOfBags={amountOfBags} location={location} whoHelps={whoHelps} street={street} city={city}
+            postCode={postCode} phoneNumber={phoneNumber} date={date} time={time} notes={notes} organization={organization} setActiveStep4={setActiveStep4}
+            setActiveSummary={setActiveSummary}/>}
+            <HomeContact/>
         </>
     );
 };
