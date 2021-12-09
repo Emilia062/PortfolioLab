@@ -7,6 +7,7 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
     const [homelessPeople, setHomelessPeople] = useState(false);
     const [disabledPeople, setDisabledPeople] = useState(false);
     const [theElderly, setTheElderly] = useState(false);
+    const [error, setError] = useState("");
 
     const help = () => {
         if(children) {
@@ -26,10 +27,18 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
         }
     }
 
+    const condition = () => {
+        if(children === true || mothers === true || homelessPeople === true || disabledPeople === true || theElderly === true){
+            setActiveStep3(false);
+            setActiveStep4(true);
+        } else {
+            setError("Proszę wybrać co najmniej jedną grupę, której chcesz pomóc");
+        }
+    }
+
     const handleNext = (e) => {
         e.preventDefault();
-        setActiveStep3(false);
-        setActiveStep4(true);
+        condition();
         help();
     }
 
@@ -38,9 +47,6 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
         setActiveStep3(false);
         setActiveStep2(true);
     }
-
-    console.log(mothers)
-    console.log(theElderly)
 
     return (
         <>
@@ -55,7 +61,7 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
             <h3 className="form__subtitle--step2">Lokalizacja:</h3>
             <div className="form__holder">
                 <select className="step2__select" value={location} onChange={e => setLocation(e.target.value)}>
-                    <option value="0" className="step2__option">- wybierz -</option>
+                    {/*<option value="0" className="step2__option">- wybierz -</option>*/}
                     <option value="Poznań" className="step2__option">Poznań</option>
                     <option value="Warszawa" className="step2__option">Warszawa</option>
                     <option value="Kraków" className="step2__option">Kraków</option>
@@ -65,29 +71,29 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
                 <p className="step3__title">Komu chcesz pomóc?</p>
                 <ul className="form__holder form__holder--step3">
                     <div>
-                        <li>
+                        <li className="step3__options">
                             <input type="checkbox" id="children" className="form__checkbox" value="children" checked={children}
                             onClick={() => setChildren(!children)}/>
                             <label htmlFor="children">dzieciom</label>
                         </li>
-                        <li>
+                        <li className="step3__options">
                             <input type="checkbox" id="mothers" className="form__checkbox" value="mothers" checked={mothers}
                             onClick={() => setMothers(!mothers)}/>
                             <label htmlFor="mothers">samotnym matkom</label>
                         </li>
-                        <li>
+                        <li className="step3__options">
                             <input type="checkbox" id="homelessPeople" className="form__checkbox" value="homelessPeople" checked={homelessPeople}
                             onClick={() => setHomelessPeople(!homelessPeople)}/>
                             <label htmlFor="homelessPeople">bezdomnym</label>
                         </li>
                     </div>
                     <div>
-                        <li>
+                        <li className="step3__options">
                             <input type="checkbox" id="disabledPeople" className="form__checkbox" value="disabledPeople" checked={disabledPeople}
                             onClick={() => setDisabledPeople(!disabledPeople)}/>
                             <label htmlFor="disabledPeople">niepełnosprawnym</label>
                         </li>
-                        <li>
+                        <li className="step3__options">
                             <input type="checkbox" id="theElderly" className="form__checkbox" value="theElderly" checked={theElderly}
                             onClick={() => setTheElderly(!theElderly)}/>
                             <label htmlFor="theElderly">osobom starszym</label>
@@ -99,6 +105,7 @@ const FormStep3 = ({setActiveStep3, setActiveStep2, setActiveStep4, location, se
                     <textarea className="step3__textarea" value={organization} onChange={e => setOrganization(e.target.value)}> </textarea>
                 </div>
             </div>
+                    <div className="form__error">{error}</div>
             <button className="form__button" onClick={handlePrev} >Wstecz</button>
             <button className="form__button" onClick={handleNext}>Dalej</button>
         </form>

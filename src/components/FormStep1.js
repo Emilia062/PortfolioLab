@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const FormStep1 = ({setActiveStep1, setActiveStep2, setThings}) => {
-    const [clothes, setClothes] = useState(false);
+    const [clothes, setClothes] = useState(true);
     const [clothesBadCondition, setClothesBadCondition] = useState(false);
     const [toys, setToys] = useState(false);
     const [books, setBooks] = useState(false);

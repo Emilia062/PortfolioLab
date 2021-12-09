@@ -28,7 +28,7 @@ const Form = () => {
     const [street, setStreet] = useState("");
     const [city, setCity] = useState("");
     const [postCode, setPostCode] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
+    const [phone, setPhone] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [notes, setNotes] = useState("");
@@ -76,10 +76,10 @@ const Form = () => {
             organization={organization} setWhoHelps={setWhoHelps} setOrganization={setOrganization}/>}
             {activeStep4 === true && <FormStep4 setActiveStep4={setActiveStep4} setActiveStep3={setActiveStep3} setSummary={setActiveSummary}
             street={street} setStreet={setStreet} city={city} setCity={setCity} postCode={postCode} setPostCode={setPostCode}
-            phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} date={date} setDate={setDate} time={time} setTime={setTime}
+            phoneNumber={phone} setPhone={setPhone} date={date} setDate={setDate} time={time} setTime={setTime}
             notes={notes} setNotes={setNotes}/>}
             {activeSummary === true && <FormSummary things={things} amountOfBags={amountOfBags} location={location} whoHelps={whoHelps} street={street} city={city}
-            postCode={postCode} phoneNumber={phoneNumber} date={date} time={time} notes={notes} organization={organization} setActiveStep4={setActiveStep4}
+            postCode={postCode} phone={phone} date={date} time={time} notes={notes} organization={organization} setActiveStep4={setActiveStep4}
             setActiveSummary={setActiveSummary}/>}
             <HomeContact/>
         </>

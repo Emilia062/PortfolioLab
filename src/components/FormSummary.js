@@ -2,7 +2,7 @@ import React from 'react';
 import tshirt from '../assets/Icon-1.svg';
 import recycle from "../assets/Icon-4.svg";
 
-const FormSummary = ({things, amountOfBags, location, street, city, postCode, phoneNumber, date, time, notes, whoHelps,organization,
+const FormSummary = ({things, amountOfBags, location, street, city, postCode, phone, date, time, notes, whoHelps,organization,
                          setActiveSummary, setActiveStep4}) => {
 
     const handlePrev = (e) => {
@@ -13,7 +13,7 @@ const FormSummary = ({things, amountOfBags, location, street, city, postCode, ph
 
     const handleNext = (e) => {
         e.preventDefault();
-        const aplication = {
+        const summary = {
             things,
             amountOfBags,
             location,
@@ -22,12 +22,12 @@ const FormSummary = ({things, amountOfBags, location, street, city, postCode, ph
             street,
             city,
             postCode,
-            phoneNumber,
+            phone,
             date,
             time,
             notes
         }
-        console.log(aplication);
+        console.log(summary);
 
     }
 
@@ -64,7 +64,7 @@ const FormSummary = ({things, amountOfBags, location, street, city, postCode, ph
                             </li>
                             <li className="step4__options">
                                 <p className="step4__title">Numer <br/>telefonu</p>
-                                <p className="step4__title">{phoneNumber}</p>
+                                <p className="step4__title">{phone}</p>
                             </li>
                         </ul>
                         <ul className="form__column">

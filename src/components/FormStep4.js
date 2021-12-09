@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormStep4 = ({street, setStreet, city, setCity, postCode, setPostCode, phoneNumber, setPhoneNumber, date, setDate,
+const FormStep4 = ({street, setStreet, city, setCity, postCode, setPostCode, phone, setPhone, date, setDate,
 time, setTime, notes, setNotes, setActiveStep3, setActiveStep4, setSummary}) => {
 
     const handlePrev = (e) => {
@@ -42,7 +42,7 @@ time, setTime, notes, setNotes, setActiveStep3, setActiveStep4, setSummary}) => 
                     </li>
                     <li className="step4__options">
                         <label className="step4__title" htmlFor="tel">Numer <br/>telefonu</label>
-                        <input type="number" id="tel" className="step4__textarea" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}/>
+                        <input type="number" id="tel" className="step4__textarea" value={phone} onChange={e => setPhone(e.target.value)}/>
                     </li>
                 </ul>
                 <ul className="form__column">
