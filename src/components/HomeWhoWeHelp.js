@@ -12,33 +12,27 @@ const HomeWhoWeHelp = () => {
             <h2 className="help__title">Komu pomagamy?</h2>
             <img src={decoration} alt={decoration} className="help__decoration"/>
             <div className="help__organizations">
-                <a className={itemsToShow === "foundations" ? "help__link active" : "help__link"}
-                   onClick= {() => setItemsToShow("foundations")} >Fundacjom</a>
-                <a className={itemsToShow === "organizations" ? "help__link active" : "help__link"}
+                <span className={itemsToShow === "foundations" ? "help__link active" : "help__link"}
+                   onClick= {() => setItemsToShow("foundations")} >Fundacjom</span>
+                <span className={itemsToShow === "organizations" ? "help__link active" : "help__link"}
                    onClick={() => setItemsToShow("organizations")}>
                 <div >Organizacjom<br/>pozarządowym</div>
-                </a>
-                <a className={itemsToShow === "collections" ? "help__link active" : "help__link"} onClick={() => setItemsToShow("collections")}>
+                </span>
+                <span className={itemsToShow === "collections" ? "help__link active" : "help__link"} onClick={() => setItemsToShow("collections")}>
                 <div>Lokalnym<br/>zbiórkom</div>
-                </a>
+                </span>
             </div>
             <p className="help__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             <div>
             {itemsToShow === "foundations" && (
-                <>
                     <Foundations />
-                </>
             )}
             {itemsToShow === "organizations" && (
-                <>
                     <Organizations />
-                </>
             )}
             {itemsToShow === "collections" && (
-                <>
                     <Collections />
-                </>
             )}
             </div>
         </div>

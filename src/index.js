@@ -4,12 +4,6 @@ import './index.css';
 import App from './App';
 import "./scss/main.scss";
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./components/Home";
-import HomeHeader from "./components/HomeHeader";
-import Login from "./components/Login";
-import Registration from "./components/Registration";
-import Form from "./components/Form";
 
 ReactDOM.render(
   <React.StrictMode>

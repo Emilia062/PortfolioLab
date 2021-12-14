@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import decoration from "../assets/Decoration.svg";
 import {Link} from "react-router-dom";
-import Registration from "./Registration";
 import HomeHeader from "./HomeHeader";
 
 const Login = () => {
@@ -46,7 +45,7 @@ const Login = () => {
                         <div>{message}</div>
                     </div>
                     <div className="panel__buttons">
-                        <Link to="/rejestracja" element={Registration} className="panel__account">Załóż konto</Link>
+                        <Link to="/rejestracja" className="panel__account">Załóż konto</Link>
                         <button className="panel__btn" >Zaloguj się</button>
                     </div>
                 </form>
